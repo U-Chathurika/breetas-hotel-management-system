@@ -1,0 +1,395 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e6f2ff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.navbar-brand {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.navbar-menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-menu li {
+  margin-right: 20px;
+}
+
+.nav-link {
+  color: #6c757d;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: #007bff;
+}
+
+.nav-link.active {
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Button styles */
+.btn {
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.btn-success {
+  background-color: #5cb85c;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #d9534f;
+  color: white;
+}
+
+.btn-info {
+  background-color: #5bc0de;
+  color: white;
+}
+
+/* Add New Item button */
+.add-new-item {
+  margin-bottom: 20px;
+}
+
+.add-new-item button {
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Search and Filter styles */
+.search-filter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filter input,
+.search-filter select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .search-filter {
+    flex-direction: column;
+  }
+
+  .search-filter input[type="text"],
+  .search-filter select {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+
+  .stocks-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+}
+
+th {
+  background-color: #f1f3f5;
+  color: #333;
+  padding: 12px;
+  text-align: left;
+  border-radius: 10px;
+}
+
+td {
+  background-color: white;
+  padding: 12px;
+}
+
+tr td:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+tr td:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* Availability styles */
+td:nth-child(3) {
+  font-weight: bold;
+}
+
+td:nth-child(3):contains("Out of Stock") {
+  color: #d9534f; /* Red for Out of Stock */
+}
+
+td:nth-child(3):contains("Low Stock") {
+  color: #ffc107; /* Yellow for Low Stock */
+}
+
+td:nth-child(3):contains("Available") {
+  color: #5cb85c; /* Green for Available */
+}
+
+/* Availability styles */
+.status {
+  font-weight: bold;
+}
+
+/* For "Out of Stock" - red color */
+.status.out-of-stock {
+  color: #d9534f; /* Red */
+}
+
+/* For "Low Stock" - green color */
+.status.low-stock {
+  color: #5cb85c; /* Green */
+}
+
+/* For "Available" - blue color */
+.status.available {
+  color: #4a90e2; /* Blue */
+}
+
+/* Inventory Tracker styles */
+.inventory-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.inventory-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.threshold-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.threshold-container label {
+  margin-right: 10px;
+}
+
+.threshold-container input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.low-stock-section {
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.low-stock-warning {
+  color: #dc3545;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.low-stock-items {
+  list-style-type: disc;
+  padding-left: 20px;
+  background-color: #350207;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.low-stock-items li {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+/* Stock card styles */
+.stocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.stock-card {
+  background-color: #e6f2ff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-header {
+  background-color: #4a90e2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-content > div {
+  background-color: #f1f3f5;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 500px;
+  border-radius: 10px;animation: fadeIn 0.3s ease-out;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional feature buttons */
+.additional-features {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.additional-features button {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.additional-features button:last-child {
+  margin-right: 0;
+}
+
+/* Responsive styles for stock cards */
+@media (max-width: 768px) {
+  .stocks-grid {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+
+/* Additional styles for better aesthetics */
+h1 {
+  color: #4a90e2;
+}
+
+h2 {
+  color: #333;
+}
+
+/* Specific styles for images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
